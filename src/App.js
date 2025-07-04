@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { ThemeProvider, createTheme, CssBaseline, Container, Typography, Box, Toolbar } from '@mui/material';
-import logo from './logo.svg';
+import { ThemeProvider, createTheme, CssBaseline, Container, Toolbar } from '@mui/material';
 import './App.css';
 import Header from './components/Header';
 import FilterBar from './components/FilterBar';
@@ -32,7 +31,7 @@ function App() {
   const [launchType, setLaunchType] = useState('all');
   const [page, setPage] = useState(1);
   const [limit] = useState(12);
-  const { launches, loading, error, pageCount } = useLaunches({ page, limit, dateRange, launchType });
+  const { launches, loading,  pageCount } = useLaunches({ page, limit, dateRange, launchType });
   const [selectedLaunch, setSelectedLaunch] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
